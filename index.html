@@ -1,0 +1,74 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hackertyper Monitor</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+      }
+
+      /* Iframe atrás */
+      .iframe-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* SVG na frente */
+      .svg-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .svg-layer img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Iframe embaixo -->
+      <div class="iframe-layer">
+        <iframe
+          src="https://hackertyper.net/"
+          title="Hackertyper"
+          style="width: 651px; height: 493px; margin: 129px 0 0 491px"
+        ></iframe>
+      </div>
+
+      <!-- SVG em cima -->
+      <div class="svg-layer">
+        <img src="monitor.svg" alt="Monitor Frame">
+      </div>
+    </div>
+  </body>
+</html>
